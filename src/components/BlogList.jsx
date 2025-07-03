@@ -24,12 +24,7 @@ const BlogList = () => {
           ))}
         </div>
 
-        {/* Footer */}
-        <div className="text-center mt-16">
-          <p className="text-gray-500">
-            © 2024 Blog Tech. Tous droits réservés.
-          </p>
-        </div>
+       
       </div>
     </div>
   );
