@@ -1,15 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import BlogList from './components/BlogList';
+import './App.css';
 
 function App() {
-
   return (
-    <>
-      <h1 className="text-3xl font-bold underline text-red-300">
-        Hello Vite + React!
-      </h1>
-    </>
-  )
+    <div className="App">
+      <Navbar />
+      <main className="container mx-auto px-4 py-8">
+        <BlogList />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
