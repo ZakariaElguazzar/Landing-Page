@@ -1,44 +1,44 @@
 export const articles = [
   {
     id: 1,
-    title: "Introduction à React et Vite",
-    excerpt: "Découvrez comment créer rapidement des applications React modernes avec Vite, l'outil de build ultra-rapide qui révolutionne le développement frontend.",
-    date: "2024-12-15",
-    category: "Développement"
+    title: "Comment bien débuter ses études en informatique",
+    excerpt: "Des conseils pratiques pour organiser ton apprentissage, choisir tes ressources et réussir ta première année en informatique.",
+    date: "2025-06-15",
+    category: "Études"
   },
   {
     id: 2,
-    title: "Tailwind CSS : Guide complet",
-    excerpt: "Maîtrisez Tailwind CSS et créez des interfaces utilisateur magnifiques avec ce framework CSS utilitaire. Apprenez les meilleures pratiques et astuces.",
-    date: "2024-12-10",
-    category: "Design"
+    title: "Mes astuces pour gérer le stress des examens",
+    excerpt: "Techniques simples et efficaces pour rester calme, gérer ton temps et aborder les examens avec confiance.",
+    date: "2025-06-10",
+    category: "Bien-être"
   },
   {
     id: 3,
-    title: "JavaScript moderne en 2024",
-    excerpt: "Explorez les dernières fonctionnalités de JavaScript ES2024 et découvrez comment elles peuvent améliorer votre code et votre productivité.",
-    date: "2024-12-05",
-    category: "JavaScript"
+    title: "Travailler en équipe sur un projet étudiant",
+    excerpt: "Apprends à collaborer efficacement, répartir les tâches et communiquer pour réussir tes projets de groupe.",
+    date: "2025-06-05",
+    category: "Collaboration"
   },
   {
     id: 4,
-    title: "Performance des applications React",
-    excerpt: "Optimisez vos applications React avec des techniques avancées : mémoisation, lazy loading, et gestion d'état efficace pour une expérience utilisateur fluide.",
-    date: "2024-11-28",
-    category: "Performance"
+    title: "Les meilleures ressources gratuites pour apprendre à coder",
+    excerpt: "Découvre une sélection de sites, vidéos et livres gratuits pour progresser en programmation à ton rythme.",
+    date: "2025-05-28",
+    category: "Ressources"
   },
   {
     id: 5,
-    title: "Design System avec Tailwind",
-    excerpt: "Créez un design system cohérent et maintenable en utilisant Tailwind CSS. Découvrez comment organiser vos composants et maintenir la consistance.",
-    date: "2024-11-20",
-    category: "Design"
+    title: "Organiser son temps entre cours et vie personnelle",
+    excerpt: "Conseils pour équilibrer études, loisirs et repos sans sacrifier ta réussite scolaire.",
+    date: "2025-05-20",
+    category: "Gestion du temps"
   },
   {
     id: 6,
-    title: "Accessibilité web moderne",
-    excerpt: "Rendez vos applications web accessibles à tous avec les meilleures pratiques d'accessibilité. Un guide pratique pour développeurs conscients.",
-    date: "2024-11-15",
-    category: "Accessibilité"
+    title: "Comment préparer un bon CV étudiant",
+    excerpt: "Guide étape par étape pour créer un CV clair et attractif qui te permettra de décrocher ton premier stage.",
+    date: "2025-05-15",
+    category: "Carrière"
   }
 ];
