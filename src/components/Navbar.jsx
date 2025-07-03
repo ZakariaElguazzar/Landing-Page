@@ -8,7 +8,7 @@ export default function Navbar() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Ici vous pouvez ajouter la logique de recherche
+    // Ici vous pouvez ajout er la logique de recherche
     console.log('Recherche:', searchQuery);
   };
 
