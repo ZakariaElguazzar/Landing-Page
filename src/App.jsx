@@ -1,16 +1,16 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import BlogList from "./components/BlogList";
-import "./App.css";
+import React from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import BlogList from './components/BlogList';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <main className="container">
-        <Navbar />
+      <Navbar />
         <BlogList />
-        <Footer />
+      <Footer />
       </main>
     </div>
   );
