@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import BlogList from './components/BlogList';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline text-red-500">
-        Hello Vite + React!
-      </h1>
-    </>
-  )
+    <div className="App">
+      <BlogList />
+    </div>
+  );
 }
 
-export default App
+export default App;
