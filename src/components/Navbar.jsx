@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Search, Home, FileText, Info, Mail, Menu, X, LogIn, UserPlus, User } from 'lucide-react';
 
-export default function Navbar() {
+export default function Navbar({ currentPage, setCurrentPage }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // État de connexion
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Ici vous pouvez ajout er la logique de recherche
     console.log('Recherche:', searchQuery);
   };
 
@@ -17,19 +16,35 @@ export default function Navbar() {
   };
 
   const handleLogin = () => {
-    // Logique de connexion
     console.log('Connexion');
   };
 
   const handleSignup = () => {
-    // Logique d'inscription
     console.log('Inscription');
   };
 
   const handleLogout = () => {
-    // Logique de déconnexion
     setIsLoggedIn(false);
     console.log('Déconnexion');
+  };
+
+  const handleNavigation = (page) => {
+    setCurrentPage(page);
+    setIsMenuOpen(false); // Fermer le menu mobile après navigation
+  };
+
+  const getNavItemClass = (page) => {
+    const baseClass = "flex items-center space-x-1 transition-colors duration-200";
+    return currentPage === page 
+      ? `${baseClass} text-blue-200` 
+      : `${baseClass} hover:text-blue-200`;
+  };
+
+  const getMobileNavItemClass = (page) => {
+    const baseClass = "flex items-center space-x-2 py-2 px-4 rounded-md transition-colors";
+    return currentPage === page 
+      ? `${baseClass} bg-blue-500` 
+      : `${baseClass} hover:bg-blue-500`;
   };
 
   return (
@@ -37,7 +52,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => handleNavigation('home')}>
             <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
               <span className="text-blue-600 font-bold text-sm">SXP</span>
             </div>
@@ -70,28 +85,28 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-6">
             <ul className="flex space-x-6">
               <li>
-                <a href="#" className="flex items-center space-x-1 hover:text-blue-200 transition-colors duration-200">
+                <button onClick={() => handleNavigation('home')} className={getNavItemClass('home')}>
                   <Home className="w-4 h-4" />
                   <span>Accueil</span>
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="flex items-center space-x-1 hover:text-blue-200 transition-colors duration-200">
+                <button onClick={() => handleNavigation('articles')} className={getNavItemClass('articles')}>
                   <FileText className="w-4 h-4" />
                   <span>Articles</span>
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="flex items-center space-x-1 hover:text-blue-200 transition-colors duration-200">
+                <button onClick={() => handleNavigation('about')} className={getNavItemClass('about')}>
                   <Info className="w-4 h-4" />
                   <span>À propos</span>
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="flex items-center space-x-1 hover:text-blue-200 transition-colors duration-200">
+                <button onClick={() => handleNavigation('contact')} className={getNavItemClass('contact')}>
                   <Mail className="w-4 h-4" />
                   <span>Contact</span>
-                </a>
+                </button>
               </li>
             </ul>
 
@@ -164,28 +179,28 @@ export default function Navbar() {
             {/* Mobile Navigation Links */}
             <ul className="space-y-2 mb-4">
               <li>
-                <a href="#" className="flex items-center space-x-2 py-2 px-4 rounded-md hover:bg-blue-500 transition-colors">
+                <button onClick={() => handleNavigation('home')} className={getMobileNavItemClass('home')}>
                   <Home className="w-4 h-4" />
                   <span>Accueil</span>
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="flex items-center space-x-2 py-2 px-4 rounded-md hover:bg-blue-500 transition-colors">
+                <button onClick={() => handleNavigation('articles')} className={getMobileNavItemClass('articles')}>
                   <FileText className="w-4 h-4" />
                   <span>Articles</span>
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="flex items-center space-x-2 py-2 px-4 rounded-md hover:bg-blue-500 transition-colors">
+                <button onClick={() => handleNavigation('about')} className={getMobileNavItemClass('about')}>
                   <Info className="w-4 h-4" />
                   <span>À propos</span>
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="flex items-center space-x-2 py-2 px-4 rounded-md hover:bg-blue-500 transition-colors">
+                <button onClick={() => handleNavigation('contact')} className={getMobileNavItemClass('contact')}>
                   <Mail className="w-4 h-4" />
                   <span>Contact</span>
-                </a>
+                </button>
               </li>
             </ul>
 
