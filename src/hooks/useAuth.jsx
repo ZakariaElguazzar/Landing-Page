@@ -16,9 +16,9 @@ export const useAuth = () => {
     setLoading(true);
     setError('');
     try {
-      const user = await authService.login(email, password);
-      setUser(user);
-      return user;
+      const userData = await authService.login(email, password);
+      setUser(userData); // Mettre à jour l'état immédiatement
+      return userData;
     } catch (err) {
       setError(err.message || 'Erreur de connexion');
       throw err;
@@ -31,9 +31,9 @@ export const useAuth = () => {
     setLoading(true);
     setError('');
     try {
-      const user = await authService.register(email, password);
-      setUser(user);
-      return user;
+      const userData = await authService.register(email, password);
+      setUser(userData); // Mettre à jour l'état immédiatement
+      return userData;
     } catch (err) {
       setError(err.message || 'Erreur lors de l\'inscription');
       throw err;

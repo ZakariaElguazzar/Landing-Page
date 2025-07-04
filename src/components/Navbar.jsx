@@ -67,15 +67,21 @@ export default function Navbar({ currentPage, setCurrentPage, user, logout }) {
         </>
       ) : (
         <div className="flex items-center space-x-3">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-              <User className="w-4 h-4" />
+          <button
+            onClick={() => handleNavigation('profile')}
+            className="flex items-center space-x-2 px-3 py-2 rounded-md hover:bg-blue-500 transition-colors duration-200"
+          >
+            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+              <User className="w-4 h-4 text-blue-600" />
             </div>
-            <span className="text-sm">{user.email}</span>
-          </div>
+            <div className="flex flex-col items-start">
+              <span className="text-sm font-medium">{user.name || 'Utilisateur'}</span>
+              <span className="text-xs text-blue-200">{user.email}</span>
+            </div>
+          </button>
           <button
             onClick={handleLogout}
-            className="text-sm hover:text-blue-200 transition-colors duration-200"
+            className="text-sm hover:text-blue-200 transition-colors duration-200 px-2 py-1 rounded"
           >
             Déconnexion
           </button>
@@ -105,12 +111,18 @@ export default function Navbar({ currentPage, setCurrentPage, user, logout }) {
         </>
       ) : (
         <div className="space-y-2">
-          <div className="flex items-center space-x-2 px-4 py-2">
-            <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-              <User className="w-4 h-4" />
+          <button
+            onClick={() => handleNavigation('profile')}
+            className="flex items-center space-x-2 w-full px-4 py-2 rounded-md hover:bg-blue-500 transition-colors duration-200"
+          >
+            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+              <User className="w-4 h-4 text-blue-600" />
             </div>
-            <span className="text-sm">{user.email}</span>
-          </div>
+            <div className="flex flex-col items-start">
+              <span className="text-sm font-medium">{user.name || 'Utilisateur'}</span>
+              <span className="text-xs text-blue-200">{user.email}</span>
+            </div>
+          </button>
           <button
             onClick={handleLogout}
             className="w-full text-left px-4 py-2 text-sm hover:bg-blue-500 rounded-md transition-colors duration-200"
