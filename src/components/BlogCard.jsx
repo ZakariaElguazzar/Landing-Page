@@ -37,7 +37,9 @@ const BlogCard = ({ article }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-        </div>
+        </div>© 2024 ShareXP. Tous droits réservés.
+
+
       </div>
     </article>
   );
